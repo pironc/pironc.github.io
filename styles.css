@@ -244,7 +244,7 @@ section h2::after {
     grid-template-columns: 1.0fr 1.0fr; /* Equal split - image smaller */
     gap: 100px; /* More space between text and image */
     align-items: center;
-    margin-bottom: 10px; /* More padding between introduction and videos */
+    margin-bottom: 40px; /* More padding between introduction and videos */
 }
 
 .about-text {
