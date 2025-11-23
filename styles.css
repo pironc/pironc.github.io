@@ -563,6 +563,10 @@ section h2::after {
         margin: 0 auto;
     }
 
+    .featured-videos .video-item {
+        border-radius: 0;
+    }
+
     .about {
         padding-top: 120px; /* More space on mobile too */
     }
