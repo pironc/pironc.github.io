@@ -181,14 +181,20 @@ section h2::after {
     background: linear-gradient(135deg, #ff6b35 0%, #d35400 100%);
 }
 
-/* Remove spacing from second about section */
-#portfolio {
-    padding-top: 0px; /* No top padding for second about section */
+/* Remove spacing from about section */
+#about {
+    padding-top: 0px; /* No top padding for about section */
 }
 
 /* Inverted layout for post-production section */
 .inverted .about-content {
     grid-template-columns: 1.0fr 1.0fr; /* Keep equal split but reverse order */
+}
+
+.about-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .inverted .about-image {
@@ -200,7 +206,7 @@ section h2::after {
 }
 
 /* Premiere image - allow natural aspect ratio */
-#portfolio .inverted .profile-img {
+#about .inverted .profile-img {
     width: 100%;
     max-width: none; /* Remove max-width constraint */
     height: auto; /* Allow natural height */
@@ -214,7 +220,7 @@ section h2::after {
     width: 170px;
 }
 
-#portfolio h2::after {
+#about h2::after {
     background: linear-gradient(135deg, #d35400 0%, #ff6b35 100%); /* Reversed gradient */
     width: 210px;
     height: 3px; /* Slightly thicker */
@@ -222,7 +228,7 @@ section h2::after {
 
 #contact h2::after {
     background: linear-gradient(135deg, #d35400 0%, #ff6b35 100%); /* Reversed gradient */
-    width: 260px;
+    width: 180px;
     height: 3px; /* Slightly thicker */
 }
 
@@ -238,7 +244,11 @@ section h2::after {
     grid-template-columns: 1.0fr 1.0fr; /* Equal split - image smaller */
     gap: 100px; /* More space between text and image */
     align-items: center;
-    margin-bottom: 80px; /* More padding between introduction and videos */
+    margin-bottom: 10px; /* More padding between introduction and videos */
+}
+
+.about-text {
+    align-self: center;
 }
 
 .about-text p {
@@ -268,6 +278,7 @@ section h2::after {
     object-position: center center; /* Center the crop area */
     border-radius: 5px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
 }
 
 /* Portfolio Section */
@@ -338,6 +349,7 @@ section h2::after {
 /* Contact Section */
 .contact {
     background: #f8f9fa;
+    padding-top: 20px;
 }
 
 .contact-content {
@@ -514,6 +526,10 @@ section h2::after {
         display: flex;
     }
 
+    .container {
+        padding: 0 20px;
+    }
+
     .hero-content h1 {
         font-size: 2rem;
     }
@@ -525,6 +541,8 @@ section h2::after {
     .videos-showcase {
         grid-template-columns: 1fr;
         gap: 15px;
+        max-width: 400px;
+        margin: 0 auto;
     }
 
     .about {
@@ -552,7 +570,7 @@ section h2::after {
     .contact-info {
         max-width: 100%;
         padding: 0;
-        text-align: center;
+        text-align: left;
     }
 
     .contact-form {
@@ -583,6 +601,6 @@ section h2::after {
     }
 
     .container {
-        padding: 0 15px;
+        padding: 0 25px;
     }
 }
