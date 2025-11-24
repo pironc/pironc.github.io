@@ -525,19 +525,24 @@ section h2::after {
 @media (max-width: 768px) {
     .nav-menu {
         position: fixed;
-        left: -100%;
+        left: 0;
         top: 80px;
-        flex-direction: column;
+        flex-direction: row;
+        justify-content: center;
         background-color: white;
         width: 100%;
         text-align: center;
-        transition: 0.3s;
+        transition: opacity 0.3s ease;
         box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
         padding: 20px 0;
+        gap: 40px;
+        opacity: 0;
+        visibility: hidden;
     }
 
     .nav-menu.active {
-        left: 0;
+        opacity: 1;
+        visibility: visible;
     }
 
     .hamburger {
