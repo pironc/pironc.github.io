@@ -1,3 +1,40 @@
+// Initialize i18n when DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+    // Small delay to ensure translations.js is fully loaded
+    setTimeout(function() {
+        initI18n();
+    }, 100);
+});
+
+// Language switcher functionality
+document.addEventListener('click', function(e) {
+    const languageDropdown = document.querySelector('.language-dropdown');
+
+    // Toggle dropdown when clicking selector
+    if (e.target.closest('.lang-selector')) {
+        languageDropdown.classList.toggle('open');
+        e.stopPropagation();
+        return;
+    }
+
+    // Close dropdown when clicking outside
+    if (!e.target.closest('.language-dropdown')) {
+        languageDropdown.classList.remove('open');
+    }
+});
+
+// Add click handlers to language options
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.lang-option').forEach(option => {
+        option.addEventListener('click', function(e) {
+            e.stopPropagation();
+            const lang = this.getAttribute('data-lang');
+            window.i18n.setLanguage(lang);
+            document.querySelector('.language-dropdown').classList.remove('open');
+        });
+    });
+});
+
 // Mobile Navigation Toggle
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');

@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FPV Pilot Portfolio - Piron Cyprien</title>
-    <meta name="description" content="Professional FPV drone pilot based in Barcelona. Specializing in aerial cinematography for events, real estate, and commercial projects across Europe.">
-    <meta name="keywords" content="FPV pilot, drone pilot, aerial cinematography, Barcelona, Spain, Greece, Kazakhstan, France, professional drone services">
+    <title data-i18n="meta_title">FPV Pilot Portfolio - Piron Cyprien</title>
+    <meta name="description" data-i18n="meta_description" content="Professional FPV drone pilot based in Barcelona. Specializing in aerial cinematography for events, real estate, and commercial projects across Europe.">
+    <meta name="keywords" data-i18n="meta_keywords" content="FPV pilot, drone pilot, aerial cinematography, Barcelona, Spain, Greece, Kazakhstan, France, professional drone services">
     <meta name="author" content="Piron Cyprien">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://pironc.com/">
@@ -13,15 +13,15 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://pironc.com/">
-    <meta property="og:title" content="FPV Pilot Portfolio - Piron Cyprien">
-    <meta property="og:description" content="Professional FPV drone pilot based in Barcelona. Specializing in aerial cinematography for events, real estate, and commercial projects across Europe.">
+    <meta property="og:title" data-i18n="og_title" content="FPV Pilot Portfolio - Piron Cyprien">
+    <meta property="og:description" data-i18n="og_description" content="Professional FPV drone pilot based in Barcelona. Specializing in aerial cinematography for events, real estate, and commercial projects across Europe.">
     <meta property="og:image" content="https://pironc.com/assets/fpv.jpg">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://pironc.com/">
-    <meta property="twitter:title" content="FPV Pilot Portfolio - Piron Cyprien">
-    <meta property="twitter:description" content="Professional FPV drone pilot based in Barcelona. Specializing in aerial cinematography for events, real estate, and commercial projects across Europe.">
+    <meta property="twitter:title" data-i18n="og_title" content="FPV Pilot Portfolio - Piron Cyprien">
+    <meta property="twitter:description" data-i18n="og_description" content="Professional FPV drone pilot based in Barcelona. Specializing in aerial cinematography for events, real estate, and commercial projects across Europe.">
     <meta property="twitter:image" content="https://pironc.com/assets/fpv.jpg">
 
     <link rel="icon" type="image/x-icon" href="assets/icon/favicon.ico">
@@ -31,6 +31,7 @@
     <link rel="manifest" href="assets/icon/site.webmanifest">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="translations.js"></script>
 
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -74,10 +75,30 @@
                 </a>
             </div>
             <ul class="nav-menu">
-                <li><a href="#home" class="nav-link">home.</a></li>
-                <li><a href="#about" class="nav-link">about.</a></li>
-                <li><a href="#contact" class="nav-link">contact.</a></li>
+                <li><a href="#home" class="nav-link" data-i18n="nav_home">home.</a></li>
+                <li><a href="#about" class="nav-link" data-i18n="nav_about">about.</a></li>
+                <li><a href="#contact" class="nav-link" data-i18n="nav_contact">contact.</a></li>
             </ul>
+            <div class="language-dropdown">
+                <button class="lang-selector">
+                    <span class="current-flag" id="current-flag">🇺🇸</span>
+                    <span class="dropdown-arrow">▼</span>
+                </button>
+                <div class="lang-options">
+                    <button data-lang="en" class="lang-option">
+                        <span class="flag">🇺🇸</span>
+                        <span class="lang-text">English</span>
+                    </button>
+                    <button data-lang="es" class="lang-option">
+                        <span class="flag">🇪🇸</span>
+                        <span class="lang-text">Español</span>
+                    </button>
+                    <button data-lang="fr" class="lang-option">
+                        <span class="flag">🇫🇷</span>
+                        <span class="lang-text">Français</span>
+                    </button>
+                </div>
+            </div>
             <div class="hamburger">
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -91,9 +112,9 @@
         <div class="container">
             <div class="about-content">
                 <div class="about-text">
-                    <p>I'm a French FPV pilot based in <strong>Barcelona</strong>, flying both indoors and outdoors using <strong>5-inch</strong> for long range and <strong>3-inch</strong> for indoors.</p>
-                    <p>For extra cinematic or accurately zoomed-in shots, the <strong>DJI Mavic 3</strong> is my go-to drone.</p>
-                    <p>I love flying and delivering the best content in the best way possible. I also have my own fleet of gear ranging from a <strong>GoPro HERO13</strong> to the <strong>Insta360 X5</strong>.</p>
+                    <p data-i18n="html:home_description_1">I'm a French FPV pilot based in <strong>Barcelona</strong>, flying both indoors and outdoors using <strong>5-inch</strong> for long range and <strong>3-inch</strong> for indoors.</p>
+                    <p data-i18n="html:home_description_2">For extra cinematic or accurately zoomed-in shots, the <strong>DJI Mavic 3</strong> is my go-to drone.</p>
+                    <p data-i18n="html:home_description_3">I love flying and delivering the best content in the best way possible. I also have my own fleet of gear ranging from a <strong>GoPro HERO13</strong> to the <strong>Insta360 X5</strong>.</p>
                 </div>
                 <div class="about-image">
                     <img src="assets/fpv.jpg" alt="Profile Picture" class="profile-img">
@@ -109,42 +130,42 @@
                         <source src="assets/greece1.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
-                    <div class="video-location">🇬🇷 Athens, Greece</div>
+                    <div class="video-location"><span class="location-flag" data-country="greece">🇬🇷</span> <span data-i18n="city_athens">Athens</span>, <span data-i18n="country_greece">Greece</span></div>
                 </div>
                 <div class="video-item">
                     <video autoplay muted loop playsinline>
                         <source src="assets/greece2.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
-                    <div class="video-location">🇬🇷 Kape Beach, Greece</div>
+                    <div class="video-location"><span class="location-flag" data-country="greece">🇬🇷</span> <span data-i18n="city_kape_beach">Kape Beach</span>, <span data-i18n="country_greece">Greece</span></div>
                 </div>
                 <div class="video-item">
                     <video autoplay muted loop playsinline>
                         <source src="assets/kazakhstan1.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
-                    <div class="video-location">🇰🇿 Black Canyon, Kazakhstan</div>
+                    <div class="video-location">🇰🇿 <span data-i18n="city_black_canyon">Black Canyon</span>, <span data-i18n="country_kazakhstan">Kazakhstan</span></div>
                 </div>
                 <div class="video-item">
                     <video autoplay muted loop playsinline>
                         <source src="assets/kazakhstan2.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
-                    <div class="video-location">🇰🇿 Astana, Kazakhstan</div>
+                    <div class="video-location">🇰🇿 <span data-i18n="city_astana">Astana</span>, <span data-i18n="country_kazakhstan">Kazakhstan</span></div>
                 </div>
                 <div class="video-item">
                     <video autoplay muted loop playsinline>
                         <source src="assets/barcelona1.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
-                    <div class="video-location">🇪🇸 Barcelona, Spain</div>
+                    <div class="video-location">🇪🇸 <span data-i18n="city_barcelona">Barcelona</span>, <span data-i18n="country_spain">Spain</span></div>
                 </div>
                 <div class="video-item">
                     <video autoplay muted loop playsinline>
                         <source src="assets/france1.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
-                    <div class="video-location">🇫🇷 Narbonne, France</div>
+                    <div class="video-location">🇫🇷 <span data-i18n="city_narbonne">Narbonne</span>, <span data-i18n="country_france">France</span></div>
                 </div>
             </div>
         </div>
@@ -153,20 +174,20 @@
     <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
-            <h2>about me.</h2>
+            <h2 data-i18n="about_title">about me.</h2>
 
             <div class="about-content">
                 <div class="about-image">
                     <img src="assets/selfie.jpg" alt="FPV Flying" class="profile-img">
                 </div>
                 <div class="about-text">
-                    <p>I fluently speak <strong>French, English and Spanish</strong> to be able to meet most of clients' needs and be able to make myself understood.</p>
+                    <p data-i18n="html:about_description_1">I fluently speak <strong>French, English and Spanish</strong> to be able to meet most of clients' needs and be able to make myself understood.</p>
                 </div>
             </div>
 
             <div class="about-content inverted">
                 <div class="about-text">
-                    <p>Transitions, effects, color-grading, music-synced or simply exporting the content in different formats for a future editing team, I not only fly but properly handle the footage and delivers it in the easiest way.</p>
+                    <p data-i18n="html:about_description_2">Transitions, effects, color-grading, music-synced or simply exporting the content in different formats for a future editing team, I not only fly but properly handle the footage and delivers it in the easiest way.</p>
                 </div>
                 <div class="about-image">
                     <img src="assets/premiere.jpg" alt="Editing" class="profile-img">
@@ -178,18 +199,18 @@
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2>contact.</h2>
+            <h2 data-i18n="contact_title">contact.</h2>
             <div class="contact-content">
                 <div class="contact-info">
-                    <p>I'm always interested in new opportunities and collaborations.
+                    <p data-i18n="contact_description">I'm always interested in new opportunities and collaborations.
                         Feel free to reach out via email or social media.</p>
                     <div class="contact-details">
                         <div class="contact-item">
-                            <h4>Email</h4>
+                            <h4 data-i18n="contact_email_title">Email</h4>
                             <a href="mailto:cyprien.piron@gmail.com">cyprien.piron@gmail.com</a>
                         </div>
                         <div class="contact-item">
-                            <h4>Social</h4>
+                            <h4 data-i18n="contact_social_title">Social</h4>
                             <div class="social-links">
                                 <a href="https://www.tiktok.com/@zypriano" target="_blank">TikTok</a>
                                 <a href="https://www.linkedin.com/in/cyprien-piron/" target="_blank">LinkedIn</a>
@@ -207,7 +228,7 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 – Piron Cyprien. All rights reserved.</p>
+            <p data-i18n="html:footer_copyright">&copy; 2025 – Piron Cyprien. All rights reserved.</p>
         </div>
     </footer>
 
